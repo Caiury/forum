@@ -12,6 +12,11 @@ public class TopicoDto {
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime data;
+	
+	
+	public TopicoDto() {
+		
+	}
 
 	public TopicoDto(Topico topico) {
 
