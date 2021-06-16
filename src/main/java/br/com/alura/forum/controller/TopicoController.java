@@ -37,8 +37,8 @@ private CursoRepository cursoRepository;
 	
 	@PostMapping
 	public void cadastrar (TopicoForm form) {
-		form.converter(cursoRepository);
-		topicoRepository.save(null);
+	Topico topico=	form.converter(cursoRepository);
+		topicoRepository.save(topico);
 	}
 	
 
