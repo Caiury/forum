@@ -23,9 +23,24 @@ public class Usuario implements UserDetails {
 	private String nome;
 	private String email;
 	private String senha;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Perfil>perfis= new ArrayList();
+	
+	
+	
+
+	public List<Perfil> getPerfis() {
+		return perfis;
+	}
+
+	public void setPerfis(List<Perfil> perfis) {
+		this.perfis = perfis;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	@Override
 	public int hashCode() {
